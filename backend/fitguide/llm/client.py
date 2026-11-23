@@ -1,8 +1,3 @@
-"""Minimal OpenAI-compatible chat client (works with Gemini, OpenRouter, Groq and others).
-
-- Tries each model in LLM_MODELS in order and moves on when a model is rate limited (429), missing (404) or broken (5xx).
-- Asks for JSON when needed and validates it with Pydantic (see parse_json_model).
-- Never logs prompts or user data."""
 from __future__ import annotations
 import json, re
 from typing import Any, Protocol, TypeVar
