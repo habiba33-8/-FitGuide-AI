@@ -1,4 +1,3 @@
-"""A scripted model for tests and offline demos. It returns queued answers in order."""
 from __future__ import annotations
 import json
 
