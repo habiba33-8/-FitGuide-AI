@@ -1,5 +1,3 @@
-"""FastAPI application: thin HTTP layer over the AI modules. Stateless by design (no database): the browser keeps the
-demo session and sends the state it needs with each request."""
 from __future__ import annotations
 import base64
 from typing import Optional
@@ -24,7 +22,7 @@ app = FastAPI(title="FitGuide AI API", version="1.0.0")
 _s = get_settings()
 app.add_middleware(CORSMiddleware, allow_origins=list(_s.allowed_origins), allow_methods=["*"], allow_headers=["*"])
 
-MAX_IMAGE_BYTES = 3_500_000  # Vercel request bodies are limited to about 4.5 MB; the frontend resizes photos first
+MAX_IMAGE_BYTES = 3_500_000  
 
 
 def get_llm() -> Optional[LLM]:
