@@ -1,5 +1,5 @@
 """All prompts live here so they are easy to read, review and version."""
-PROMPT_VERSION = "2026-11-v1"
+PROMPT_VERSION = "2026-5-v1"
 
 CHAT_SYSTEM = """You are FitGuide, a friendly fitness and nutrition coach inside a demo app.
 Rules:
