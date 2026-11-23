@@ -1,32 +1,24 @@
-
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
-    "app": {
-      "root": ".",
-      "framework": "fastapi"
-    },
-    "backend": {
-      "root": "backend",
-      "runtime": "python"
-    },
     "frontend": {
       "root": "frontend",
       "framework": "vite"
+    },
+    "backend": {
+      "root": "backend",
+      "runtime": "python",
+      "entrypoint": "fitguide.main:app"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": {
-        "service": "backend"
-      }
+      "destination": { "service": "backend" }
     },
     {
       "source": "/(.*)",
-      "destination": {
-        "service": "app"
-      }
+      "destination": { "service": "frontend" }
     }
   ]
 }
