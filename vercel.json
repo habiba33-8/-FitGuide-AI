@@ -1,4 +1,14 @@
 {
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "functions": { "api/index.py": { "maxDuration": 60, "includeFiles": "backend/**" } },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
+
+{
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "app": {
