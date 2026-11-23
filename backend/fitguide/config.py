@@ -1,8 +1,3 @@
-"""Settings read from environment variables (never hardcoded).
-
-Put your key in backend/.env (copy .env.example). On Vercel, add the same
-variables in Project Settings -> Environment Variables.
-"""
 from __future__ import annotations
 import os
 from dataclasses import dataclass, field
