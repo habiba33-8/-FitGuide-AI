@@ -1,8 +1,3 @@
-"""Knowledge base loading, chunking and retrieval.
-
-Chunking: each markdown file is split at '## ' headings. Every chunk keeps the file title and heading, because
-a chunk like "Pace" is meaningless on its own. Per-user facts (profile, today's log, plan) are turned into extra
-chunks at request time, so the same retriever answers both general questions and "what should I eat now?"."""
 from __future__ import annotations
 import re
 from dataclasses import dataclass
