@@ -1,8 +1,8 @@
 # FitGuide AI
 
-An AI fitness and nutrition coach demo. It builds a weekly workout and meal plan from your body and goal, lets you log meals by text or photo, answers questions from a small knowledge base, and renews the plan each week from your real progress.
+An AI fitness and nutrition coach. It builds a weekly workout and meal plan from your body and goal, lets you log meals by text or photo, answers questions from a small knowledge base, and renews the plan each week from your real progress.
 
-> Portfolio demo. It gives general guidance and is not medical advice.
+> It gives general guidance and is not medical advice.
 
 ## The problem
 
