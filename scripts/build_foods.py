@@ -1,10 +1,3 @@
-"""Builds backend/fitguide/data/foods.json from a compact table.
-Values are per 100 g of the food AS EATEN (cooked where it says cooked).
-They are rounded reference values compiled from common public nutrition tables
-(USDA-style values for global foods; typical recipe-based estimates for Egyptian
-dishes). They are estimates, not lab measurements. See docs/EVALUATION.md.
-Columns: id, name, arabic, category, kcal, protein, carbs, fat, portion_g, portion_label, aliases
-"""
 import json, pathlib
 F = [
 # Egyptian / Middle Eastern
