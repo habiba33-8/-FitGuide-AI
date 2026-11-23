@@ -1,6 +1,3 @@
-"""Optional visit log for the demo owner. Off unless VISIT_LOG_WEBHOOK_URL is set.
-It sends ONLY: event name, UTC time and (if the visitor typed one) the first name. No health data, no IP, no chat text.
-Point it at something you own (a Google Apps Script web app writing to a Sheet, a Discord webhook, etc.)."""
 from __future__ import annotations
 import datetime as dt
 import httpx
