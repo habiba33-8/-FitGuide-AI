@@ -104,9 +104,6 @@ npm run typecheck && npm test
 
 Read the limits in [docs/EVALUATION.md](docs/EVALUATION.md): the test queries were written by the project author, so they are optimistic.
 
-## Deploy on Vercel
-
-See [docs/DEPLOY.md](docs/DEPLOY.md). Short version: import the repo in Vercel, add `LLM_API_KEY` under Environment Variables, deploy. Never commit your key.
 
 ## Honest limitations
 
