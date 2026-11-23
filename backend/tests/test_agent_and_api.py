@@ -3,7 +3,7 @@ import pytest
 from fastapi.testclient import TestClient
 from fitguide.main import app, get_llm
 from fitguide.llm.mock import MockLLM
-from fitguide.llm.client import extract_json
+from fitguide.llm.client import LLMError, extract_json
 from fitguide.agent.chat import respond
 from fitguide.planner.build import generate_plan
 from fitguide.schemas import ChatRequest, ChatMessage, SessionState
@@ -61,8 +61,8 @@ def test_chat_bad_json_is_retried_then_ok():
     assert r.reply == "Hello!" and len(llm.calls) == 2
 
 
-def test_chat_bad_json_twice_falls_back():
-    llm = MockLLM("nope", "still nope")
+def test_chat_bad_json_three_times_falls_back():
+    llm = MockLLM("nope", "still nope", "nope again")
     r = run(respond(llm, req("how much water should I drink")))
     assert r.degraded and "hydration" in " ".join(s.id for s in r.sources)
 
@@ -141,3 +141,111 @@ def test_api_meal_compute(client):
     r = client.post("/api/meal/compute", json={"items": [{"food_id": "boiled_egg", "grams": 100}]}).json()
     assert r["totals"]["kcal"] == 155
     assert client.post("/api/meal/compute", json={"items": [{"food_id": "nope", "grams": 100}]}).status_code == 422
+
+
+def test_repair_json_fixes_cut_off_and_trailing_commas():
+    assert extract_json('{"reply": "hi", "plan_changes": [],}')["reply"] == "hi"
+    cut = extract_json('{"reply": "done", "plan_changes": [{"op": "move_day", "days": ["monday", "tue')
+    assert cut["plan_changes"][0]["op"] == "move_day"
+
+
+def test_chat_days_applied_by_code_when_ai_json_is_broken(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    llm = MockLLM("{broken", "{still broken", "{nope")
+    r = run(respond(llm, req("i want to change my plan days to sunday , Tuesday, Thursday", profile, plan)))
+    assert r.plan is not None and [w.day for w in r.plan.workouts if not w.rest] == [1, 3, 6]
+
+
+def test_chat_days_applied_even_if_ai_only_claims_it(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    llm = MockLLM({"reply": "I have updated your schedule to Sunday, Tuesday and Thursday.", "plan_changes": []})
+    r = run(respond(llm, req("اتمرن السبت والتلات والخميس", profile, plan, lang="ar")))
+    assert [w.day for w in r.plan.workouts if not w.rest] == [1, 3, 5]
+    assert any(a.type == "plan_changed" for a in r.actions)
+
+
+def test_chat_days_followup_overrides_invalid_model_change(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    request = ChatRequest(
+        messages=[
+            ChatMessage(role="assistant", content="Which specific days of the week would you prefer?"),
+            ChatMessage(role="user", content="Sunday, Tuesday and Thursday"),
+        ],
+        state=SessionState(profile=profile, plan=plan),
+    )
+    llm = MockLLM({"reply": "I have updated your training days.", "plan_changes": [{"op": "set_training_days", "days": []}]})
+    r = run(respond(llm, request))
+    assert r.plan is not None and [w.day for w in r.plan.workouts if not w.rest] == [1, 3, 6]
+    assert any(a.type == "plan_changed" for a in r.actions)
+    assert not any(a.type == "refused_plan_change" for a in r.actions)
+
+
+def test_chat_days_followup_applies_when_model_fails(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    request = ChatRequest(
+        messages=[
+            ChatMessage(role="assistant", content="Which specific days of the week would you prefer?"),
+            ChatMessage(role="user", content="Sunday, Tuesday and Thursday"),
+        ],
+        state=SessionState(profile=profile, plan=plan),
+    )
+
+    class FailedLLM:
+        async def chat(self, *args, **kwargs):
+            raise LLMError("All models failed")
+
+    r = run(respond(FailedLLM(), request))
+    assert r.plan is not None and [w.day for w in r.plan.workouts if not w.rest] == [1, 3, 6]
+    assert any(a.type == "plan_changed" for a in r.actions)
+
+
+def test_chat_asks_before_applying_unspecified_day_change(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    llm = MockLLM({
+        "reply": "I've updated your training days count to 3 days per week.",
+        "plan_changes": [{"op": "set_days", "number": 3}],
+    })
+    r = run(respond(llm, req("I want to change my plan days", profile, plan)))
+    assert r.plan is None
+    assert not any(a.type == "plan_changed" for a in r.actions)
+    assert "How many days per week" in r.reply and "which weekdays" in r.reply
+
+
+def test_chat_uses_explicit_day_count_instead_of_model_guess(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    llm = MockLLM({
+        "reply": "I've updated your training days.",
+        "plan_changes": [{"op": "set_days", "number": 3}],
+    })
+    r = run(respond(llm, req("I want to change my plan to 4 days per week", profile, plan)))
+    assert r.plan is not None and sum(not w.rest for w in r.plan.workouts) == 4
+    assert any(a.type == "plan_changed" and "4 days" in a.summary for a in r.actions)
+
+
+def test_chat_accepts_day_count_answer_after_clarification(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    request = ChatRequest(
+        messages=[
+            ChatMessage(role="assistant", content="How many days per week would you like to train?"),
+            ChatMessage(role="user", content="4"),
+        ],
+        state=SessionState(profile=profile, plan=plan),
+    )
+    llm = MockLLM({"reply": "I've updated your training days to 3.", "plan_changes": [{"op": "set_days", "number": 3}]})
+    r = run(respond(llm, request))
+    assert r.plan is not None and sum(not w.rest for w in r.plan.workouts) == 4
+    assert any(a.type == "plan_changed" and "4 days" in a.summary for a in r.actions)
+
+
+def test_chat_never_claims_change_without_applying(profile):
+    plan = generate_plan(profile); plan.status = "approved"
+    llm = MockLLM({"reply": "I have updated your training schedule as you requested.", "plan_changes": []})
+    r = run(respond(llm, req("i want to change my plan days", profile, plan)))
+    assert r.plan is None and "updated" not in r.reply and "weekdays" in r.reply
+
+
+def test_meal_question_with_a_weekday_does_not_change_plan(profile):
+    plan = generate_plan(profile)
+    llm = MockLLM({"reply": "You ate 1900 kcal.", "plan_changes": []})
+    r = run(respond(llm, req("what did I eat on Tuesday and Thursday", profile, plan)))
+    assert r.plan is None

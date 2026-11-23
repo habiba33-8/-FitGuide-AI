@@ -1,4 +1,3 @@
-"""Workout planner: turns (profile, approach, settings) into a 7 day schedule. Fully deterministic."""
 from __future__ import annotations
 from ..schemas import Profile, PlanExercise, WorkoutDay
 from . import library as lib
@@ -78,6 +77,12 @@ def sets_reps(p: Profile, slot_index: int, muscle: str, pattern: str, bump: int,
     return sets, reps
 
 
+def training_days_for(p: Profile, settings: dict) -> list[int]:
+    """Weekdays (0 = Monday) the user trains on: their own choice from chat, or a sensible default spread."""
+    chosen = sorted({int(d) for d in settings.get("training_days", []) if 0 <= int(d) <= 6})
+    return chosen if 2 <= len(chosen) <= 6 else SCHEDULE[p.days_per_week]
+
+
 def build_workouts(p: Profile, approach: str, week_index: int, settings: dict) -> list[WorkoutDay]:
     tmpl = TEMPLATES[approach]
     exclude = set(settings.get("excluded_exercises", [])) | lib.injury_excludes(p.injuries)
@@ -85,10 +90,12 @@ def build_workouts(p: Profile, approach: str, week_index: int, settings: dict) -
     bump = int(settings.get("volume_bump", 0))
     deload = bool(settings.get("deload", False))
     equipment = "without_machine" if approach == "home" else p.equipment
-    days = SCHEDULE[p.days_per_week]
+    days = training_days_for(p, settings)
+    session_map = {int(k): v for k, v in settings.get("session_map", {}).items()}  # weekday -> which session of the template
     out: dict[int, WorkoutDay] = {}
     used_global: dict[str, int] = {}
-    for n, day_index in enumerate(days):
+    for rank, day_index in enumerate(days):
+        n = session_map.get(day_index, rank)  # moving a day keeps its session (same exercises)
         title, slots = tmpl["days"][n % len(tmpl["days"])]
         if approach == "ppl" and p.days_per_week == 5 and n >= 3:
             title, slots = tmpl["days"][n - 3]  # 5 days: PPL + Push/Pull

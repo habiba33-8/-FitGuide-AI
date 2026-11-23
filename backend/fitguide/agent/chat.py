@@ -1,19 +1,10 @@
-"""The chat agent. One user message goes through these steps (each one is a function you can read and test):
-
- 1. retrieve   : find the most relevant knowledge-base and personal-data chunks (RAG)
- 2. prompt     : build the prompt = rules + context + short history (user text is wrapped as untrusted data)
- 3. generate   : ask the LLM for ONE JSON object (reply + proposed meal/water/plan changes)
- 4. validate   : parse with Pydantic; unknown foods are reported, never guessed
- 5. act        : plan changes are applied by deterministic code (planner/change.py), meals and water are returned
-                 as proposals for the user to confirm in the UI
- 6. fallback   : with no key or a failing model the user still gets retrieved passages, clearly marked."""
 from __future__ import annotations
 import json, re
 from pydantic import BaseModel, Field
 from ..calc import nutrition as nut
 from ..llm.client import LLM, LLMError, parse_json_model
 from ..llm.prompts import CHAT_SYSTEM
-from ..planner.change import PlanChange, apply_change
+from ..planner.change import PlanChange, apply_change, day_count_from_text, days_change_from_text
 from ..rag.retriever import retrieve
 from ..schemas import Action, ChatRequest, ChatResponse, SourceRef
 
@@ -89,15 +80,61 @@ def fallback_reply(req: ChatRequest, sources: list[SourceRef], reason: str) -> C
     return ChatResponse(reply=reply, sources=sources[:3], actions=actions, degraded=True, trace=[f"fallback: {reason}"])
 
 
+CLAIM_RE = re.compile(r"\b(updated|changed|moved|switched|adjusted|set your)\b|غيرت|عدلت|نقلت|حدثت|اتغيرت|اتعدلت", re.I)
+PLAN_WORDS = re.compile(r"plan|schedule|days|train|workout|خطة|الخطه|خطه|ايام|أيام|الايام|تمرين|اتمرن", re.I)
+ASK_DAYS_RE = re.compile(
+    r"\b(?:which|what|tell me)\b.{0,100}\b(?:days?|weekdays?)\b|"
+    r"\b(?:days?|weekdays?)\b.{0,100}\b(?:prefer|would you like|want to train|choose|pick)\b|"
+    r"(?:الأيام|ايام).{0,50}(?:تتمرن|تتمرني|التمرين)",
+    re.I,
+)
+
+
+def awaiting_training_days(req: ChatRequest) -> bool:
+    if len(req.messages) < 2 or req.messages[-2].role != "assistant":
+        return False
+    return bool(ASK_DAYS_RE.search(req.messages[-2].content))
+
+
+def apply_plan_changes(state, changes: list[PlanChange], lang: str) -> tuple[list[Action], object, str]:
+    """Runs plan changes through the validating code. Returns (actions, new plan or None, extra reply text)."""
+    actions: list[Action] = []
+    plan, extra, cur = None, "", state.plan
+    for ch in changes:
+        res = apply_change(state.profile, cur, ch)
+        if res.ok and res.plan:
+            res.plan.status = cur.status
+            res.plan.changes = cur.changes + [res.message] if cur.changes and cur.changes[-1] != res.message else [res.message]
+            cur, plan = res.plan, res.plan
+            actions.append(Action(type="plan_changed", summary=res.message))
+        else:
+            actions.append(Action(type="refused_plan_change", summary=res.message))
+            extra += "\n\n" + res.message
+    return actions, plan, extra
+
+
 async def respond(llm: LLM | None, req: ChatRequest) -> ChatResponse:
     trace: list[str] = []
     sources = retrieve(retrieval_query(req), req.state, k=4)
     trace.append(f"retrieved {len(sources)} chunks: " + ", ".join(s.id for s in sources))
     if llm is None:
         return fallback_reply(req, sources, "no API key configured")
+    awaiting_days = awaiting_training_days(req)
     try:
         turn = await parse_json_model(llm, build_messages(req, sources), LLMTurn, temperature=0.3, max_tokens=1000)
     except LLMError as e:
+        # The AI failed, but a clear "train on Sat, Tue, Thu" request can still be handled by plain code.
+        st = req.state
+        user_text = req.messages[-1].content
+        change = days_change_from_text(user_text, awaiting_days=awaiting_days)
+        if not change:
+            count = day_count_from_text(user_text, awaiting_days=awaiting_days)
+            change = PlanChange(op="set_days", number=count) if count is not None else None
+        if change and st.profile and st.plan:
+            acts, new_plan, extra = apply_plan_changes(st, [change], req.lang)
+            msg = acts[0].summary
+            return ChatResponse(reply=msg + ("\n\n(The AI model was unavailable, so I applied this directly.)" if req.lang == "en" else "\n\n(الموديل كان مش متاح فنفذتها مباشرة.)"),
+                                sources=[], actions=acts, plan=new_plan, degraded=True, trace=[f"fallback: {str(e)[:80]}", "days change applied by code"])
         return fallback_reply(req, sources, str(e)[:120])
 
     reply = turn.reply.strip()
@@ -116,21 +153,42 @@ async def respond(llm: LLM | None, req: ChatRequest) -> ChatResponse:
         actions.append(Action(type="log_water", water_ml=turn.water_ml, summary=f"{turn.water_ml} ml of water"))
 
     state = req.state
-    if turn.plan_changes:
+    changes = list(turn.plan_changes)
+    user_text = req.messages[-1].content
+    forced = days_change_from_text(user_text, awaiting_days=awaiting_days)
+    explicit_day_count = day_count_from_text(user_text, awaiting_days=awaiting_days)
+    rejected_day_change = False
+    if forced and not any(c.op == "move_day" for c in changes):
+        changes = [c for c in changes if c.op not in ("set_days", "set_training_days")] + [forced]
+        trace.append("training days taken from the user's message by code")
+    elif explicit_day_count is not None and not any(c.op == "move_day" for c in changes):
+        changes = [c for c in changes if c.op not in ("set_days", "set_training_days")]
+        changes.append(PlanChange(op="set_days", number=explicit_day_count))
+        trace.append("training day count taken from the user's message by code")
+    else:
+        rejected_day_change = any(c.op in ("set_days", "set_training_days") for c in changes)
+        changes = [c for c in changes if c.op not in ("set_days", "set_training_days")]
+    if rejected_day_change:
+        clarification = (
+            "I did not change your plan. How many days per week would you like to train (2–6), "
+            "or which weekdays would you prefer?"
+            if req.lang == "en"
+            else "لم أغيّر خطتك. تحبي تتمرني كام يوم في الأسبوع (من ٢ إلى ٦)، أو في أنهي أيام؟"
+        )
+        reply = f"{reply}\n\n{clarification}" if changes else clarification
+        trace.append("ignored an unspecified training-day change")
+    if changes:
         if not (state.profile and state.plan):
             reply += "\n\n" + ("Create your plan first, then I can change it." if req.lang == "en" else "اعمل خطتك الأول وبعدين أقدر أعدلها.")
         else:
-            cur = state.plan
-            for ch in turn.plan_changes:
-                res = apply_change(state.profile, cur, ch)
-                if res.ok and res.plan:
-                    res.plan.status = cur.status
-                    res.plan.changes = cur.changes + [res.message] if cur.changes and cur.changes[-1] != res.message else [res.message]
-                    cur, plan = res.plan, res.plan
-                    actions.append(Action(type="plan_changed", summary=res.message))
-                else:
-                    actions.append(Action(type="refused_plan_change", summary=res.message))
-                    reply += "\n\n" + res.message
-            trace.append(f"plan changes: {[c.op for c in turn.plan_changes]}")
+            acts, plan, extra = apply_plan_changes(state, changes, req.lang)
+            actions += acts
+            reply += extra
+            trace.append(f"plan changes: {[c.op for c in changes]}")
+    elif not rejected_day_change and state.plan and CLAIM_RE.search(reply) and PLAN_WORDS.search(user_text) and not actions:
+        # never say "done" when no change was applied
+        reply = ("I did not change your plan. How many days per week would you like to train (2–6), or which weekdays would you prefer?" if req.lang == "en"
+                 else "لم أغيّر خطتك. تحبي تتمرني كام يوم في الأسبوع (من ٢ إلى ٦)، أو في أنهي أيام؟")
+        trace.append("blocked a claim of a plan change that was not applied")
     used = [s for s in sources if s.id in set(turn.used_sources)] or sources[:2]
     return ChatResponse(reply=reply, sources=[s for s in used if not s.id.startswith("user#")][:3] or used[:2], actions=actions, plan=plan, trace=trace)

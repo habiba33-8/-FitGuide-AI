@@ -1,9 +1,9 @@
-"""generate_plan(): the single entry point that builds a Plan from a profile + settings."""
 from __future__ import annotations
 import hashlib
+from . import workout
 from ..calc.energy import compute_targets
 from ..schemas import Plan, Profile
-from . import workout, diet
+from . import diet
 
 
 def effective_profile(p: Profile, settings: dict) -> Profile:
@@ -11,7 +11,9 @@ def effective_profile(p: Profile, settings: dict) -> Profile:
     patch = {}
     if settings.get("equipment"):
         patch["equipment"] = settings["equipment"]
-    if settings.get("days_per_week"):
+    if settings.get("training_days"):  # exact weekdays chosen in chat win over a plain count
+        patch["days_per_week"] = len(settings["training_days"])
+    elif settings.get("days_per_week"):
         patch["days_per_week"] = settings["days_per_week"]
     if settings.get("level"):
         patch["level"] = settings["level"]
