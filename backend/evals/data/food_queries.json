@@ -1,0 +1,16 @@
+[
+ ["koshari","koshary"],["kushari","koshary"],["كشري","koshary"],["ful","ful_medames"],["فول مدمس","ful_medames"],["foul","ful_medames"],
+ ["falafel","taameya"],["طعمية","taameya"],["baladi bread","aish_baladi"],["عيش بلدي","aish_baladi"],["molokhia","molokhia"],["ملوخية","molokhia"],
+ ["grilled chicken","chicken_breast_grilled"],["chicken breast","chicken_breast_grilled"],["فراخ مشوية","chicken_breast_grilled"],
+ ["white rice","white_rice"],["رز أبيض","white_rice"],["brown rice","brown_rice"],["pasta","pasta"],["macaroni","pasta"],["مكرونة","pasta"],
+ ["boiled egg","boiled_egg"],["eggs","boiled_egg"],["omelet","beid_omelette"],["greek yoghurt","greek_yogurt"],["زبادي","yogurt_plain"],
+ ["cottage cheese","cottage_cheese"],["قريش","cottage_cheese"],["feta","feta_cheese"],["oatmeal","oats"],["شوفان","oats"],
+ ["banana","banana"],["موز","banana"],["apple","apple"],["تفاح","apple"],["orange juice","juice_orange"],["tuna","tuna_canned"],["تونة","tuna_canned"],
+ ["salmon","salmon"],["shrimp","shrimp"],["جمبري","shrimp"],["lentil soup","lentils_cooked"],["عدس","lentils_cooked"],["chickpeas","chickpeas_cooked"],
+ ["hummus","hummus"],["peanut butter","peanut_butter"],["almonds","almonds"],["avocado","avocado"],["olive oil","olive_oil"],
+ ["french fries","french_fries"],["fries","french_fries"],["pizza slice","pizza_cheese"],["hamburger","burger_beef"],["shawarma","shawarma_chicken"],
+ ["kofta","kofta"],["كفتة","kofta"],["liver","kebda"],["كبدة","kebda"],["basbousa","basbousa"],["om ali","om_ali"],["rice pudding","roz_bel_laban"],
+ ["sweet potato","sweet_potato"],["بطاطا","sweet_potato"],["potato boiled","potato_boiled"],["whey","whey_protein"],["cola","soda"],["tea with sugar","tea_sugar"],
+ ["coffee","coffee_black"],["latte","latte"],["whole wheat bread","bread_whole"],["toast","bread_white"],["koshary plat","koshary"],["moloukhia","molokhia"],
+ ["shakshuka","shakshuka"],["hawawshy","hawawshi"],["feteer","feteer"],["dates","dates"],["tahini","tahini"],["labneh","labneh"]
+]

@@ -1,0 +1,1782 @@
+[
+ {
+  "id": "push_up",
+  "name": "Push-Up",
+  "muscle": "chest",
+  "secondary": [
+   "triceps",
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Hands under shoulders, body in a straight line",
+   "Lower chest to just above the floor",
+   "Press up without sagging the hips"
+  ],
+  "common_mistake": "Flaring elbows out to 90 degrees",
+  "alternative": "incline_push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=WDIpL0pjun0",
+   "title": "How to do a Push-Up | Proper Form & Technique | NASM",
+   "channel": "National Academy of Sports Medicine (NASM)",
+   "verified": true
+  }
+ },
+ {
+  "id": "incline_push_up",
+  "name": "Incline Push-Up",
+  "muscle": "chest",
+  "secondary": [
+   "triceps",
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Hands on a bench or sturdy table",
+   "Keep the body straight",
+   "Lower chest to the edge, press back"
+  ],
+  "common_mistake": "Dropping the hips",
+  "alternative": "push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=Z0bRiVhnO8Q",
+   "title": "How to Do Incline Push Ups",
+   "channel": "LIVESTRONG",
+   "verified": true
+  }
+ },
+ {
+  "id": "barbell_bench_press",
+  "name": "Barbell Bench Press",
+  "muscle": "chest",
+  "secondary": [
+   "triceps",
+   "shoulders"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "push",
+  "cues": [
+   "Shoulder blades pinched, feet planted",
+   "Lower the bar to mid-chest",
+   "Press up and slightly back"
+  ],
+  "common_mistake": "Bouncing the bar off the chest",
+  "alternative": "dumbbell_bench_press",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ysUTNll8JQ8",
+   "title": "How To: Barbell Bench Press | 3 GOLDEN RULES (MADE BETTER!)",
+   "channel": "ScottHermanFitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "dumbbell_bench_press",
+  "name": "Dumbbell Bench Press",
+  "muscle": "chest",
+  "secondary": [
+   "triceps",
+   "shoulders"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Dumbbells at chest level, palms forward",
+   "Press up until arms are straight",
+   "Lower slowly for 2 to 3 seconds"
+  ],
+  "common_mistake": "Letting the dumbbells drift too wide",
+  "alternative": "push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=jAD1Nsuq3lM",
+   "title": "How to Dumbbell Bench Press | Beast Strong Powerhouse #benchpress #dumbbellpress #strengthtraining",
+   "channel": "Beast Strong Powerhouse",
+   "verified": true
+  }
+ },
+ {
+  "id": "incline_dumbbell_press",
+  "name": "Incline Dumbbell Press",
+  "muscle": "chest",
+  "secondary": [
+   "shoulders",
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "push",
+  "cues": [
+   "Bench at 30 to 45 degrees",
+   "Press the dumbbells over the upper chest",
+   "Control the way down"
+  ],
+  "common_mistake": "Bench set too steep, turning it into a shoulder press",
+  "alternative": "incline_push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=oZVCBM9f8Eo",
+   "title": "How To Do A Dumbbell Incline Press",
+   "channel": "PureGym",
+   "verified": true
+  }
+ },
+ {
+  "id": "machine_chest_press",
+  "name": "Machine Chest Press",
+  "muscle": "chest",
+  "secondary": [
+   "triceps",
+   "shoulders"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Adjust the seat so handles are at mid-chest",
+   "Press forward without locking elbows",
+   "Return slowly"
+  ],
+  "common_mistake": "Shoulders rolling forward",
+  "alternative": "push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ZPteUPefxEg",
+   "title": "Machine Chest Press TUTORIAL",
+   "channel": "Berci",
+   "verified": true
+  }
+ },
+ {
+  "id": "cable_fly",
+  "name": "Cable Fly",
+  "muscle": "chest",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "isolation",
+  "cues": [
+   "Slight bend in the elbows",
+   "Bring hands together in a hugging arc",
+   "Pause and stretch slowly"
+  ],
+  "common_mistake": "Turning it into a press by bending elbows more",
+  "alternative": "dumbbell_fly",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=eQ_NBB6OBH4",
+   "title": "HOW TO: Chest \"Low-To-High\" Cable Fly (BIGGER UPPER CHEST) || PERFECT FORM",
+   "channel": "ScottHermanFitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "dumbbell_fly",
+  "name": "Dumbbell Fly",
+  "muscle": "chest",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "isolation",
+  "cues": [
+   "Lie flat, arms slightly bent",
+   "Open arms to chest level",
+   "Squeeze the chest to bring them back"
+  ],
+  "common_mistake": "Going too deep and straining the shoulders",
+  "alternative": "push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=QENKPHhQVi4",
+   "title": "How to Properly Do a DUMBBELL FLY | Mind Pump",
+   "channel": "Mind Pump TV",
+   "verified": true
+  }
+ },
+ {
+  "id": "chest_dip",
+  "name": "Chest Dip",
+  "muscle": "chest",
+  "secondary": [
+   "triceps",
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "advanced",
+  "pattern": "push",
+  "cues": [
+   "Lean forward slightly",
+   "Lower until upper arms are parallel to the floor",
+   "Press up without shrugging"
+  ],
+  "common_mistake": "Going too deep with a stressed shoulder",
+  "alternative": "push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=dX_nSOOJIsE",
+   "title": "How to Do a Chest Dip | Chest Workout",
+   "channel": "Howcast",
+   "verified": true
+  }
+ },
+ {
+  "id": "pull_up",
+  "name": "Pull-Up",
+  "muscle": "back",
+  "secondary": [
+   "biceps",
+   "forearms"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "advanced",
+  "pattern": "pull",
+  "cues": [
+   "Hang with hands slightly wider than shoulders",
+   "Pull chest toward the bar",
+   "Lower fully under control"
+  ],
+  "common_mistake": "Kipping and half reps",
+  "alternative": "lat_pulldown",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=I3vH43n7n2Q",
+   "title": "How to Perform a Proper Pull-Up!",
+   "channel": "Mission Move Physical Therapy",
+   "verified": true
+  }
+ },
+ {
+  "id": "assisted_pull_up",
+  "name": "Assisted Pull-Up",
+  "muscle": "back",
+  "secondary": [
+   "biceps"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "Pick an assistance weight that allows 8 reps",
+   "Pull elbows down to your ribs",
+   "Control the lowering"
+  ],
+  "common_mistake": "Using too much assistance and not engaging the back",
+  "alternative": "lat_pulldown",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=4yE-XGDWJPg",
+   "title": "How to do Banded Assisted Pull-Ups",
+   "channel": "REP",
+   "verified": true
+  }
+ },
+ {
+  "id": "lat_pulldown",
+  "name": "Lat Pulldown",
+  "muscle": "back",
+  "secondary": [
+   "biceps"
+  ],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "Grip slightly wider than shoulders",
+   "Pull the bar to the upper chest",
+   "Squeeze shoulder blades down"
+  ],
+  "common_mistake": "Leaning far back and swinging",
+  "alternative": "inverted_row",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=GL3h256d6JM",
+   "title": "How To Do A Lat Pulldown | Exercise Demonstration Video and Guide",
+   "channel": "Live Lean TV Daily Exercises",
+   "verified": true
+  }
+ },
+ {
+  "id": "barbell_row",
+  "name": "Barbell Row",
+  "muscle": "back",
+  "secondary": [
+   "biceps",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "pull",
+  "cues": [
+   "Hinge at the hips, flat back",
+   "Pull the bar to the lower ribs",
+   "Lower with control"
+  ],
+  "common_mistake": "Rounding the lower back",
+  "alternative": "dumbbell_row",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=RQU8wZPbioA",
+   "title": "How To Barbell Row",
+   "channel": "Alan Thrall (Untamed Strength)",
+   "verified": true
+  }
+ },
+ {
+  "id": "dumbbell_row",
+  "name": "One-Arm Dumbbell Row",
+  "muscle": "back",
+  "secondary": [
+   "biceps"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "One hand and knee on a bench",
+   "Pull the dumbbell toward the hip",
+   "Keep the torso still"
+  ],
+  "common_mistake": "Twisting the torso",
+  "alternative": "inverted_row",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=epSR-ma7BsY",
+   "title": "How to Do A One-Arm Dumbbell Row | Exercise Tutorial",
+   "channel": "Chris Gates Fitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "seated_cable_row",
+  "name": "Seated Cable Row",
+  "muscle": "back",
+  "secondary": [
+   "biceps"
+  ],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "Sit tall, slight knee bend",
+   "Pull handle to the stomach",
+   "Pause and squeeze the shoulder blades"
+  ],
+  "common_mistake": "Rocking the whole torso",
+  "alternative": "dumbbell_row",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=lJoozxC0Rns",
+   "title": "How To Do A Seated Cable Row",
+   "channel": "PureGym",
+   "verified": true
+  }
+ },
+ {
+  "id": "inverted_row",
+  "name": "Inverted Row",
+  "muscle": "back",
+  "secondary": [
+   "biceps"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "Lie under a low bar or table edge",
+   "Keep the body straight",
+   "Pull chest to the bar"
+  ],
+  "common_mistake": "Hips sagging",
+  "alternative": "dumbbell_row",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=hXTc1mDnZCw",
+   "title": "Inverted Row Guide | Form Tips, Muscles Worked, and Mistakes",
+   "channel": "BarBend",
+   "verified": true
+  }
+ },
+ {
+  "id": "deadlift",
+  "name": "Conventional Deadlift",
+  "muscle": "back",
+  "secondary": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "advanced",
+  "pattern": "hinge",
+  "cues": [
+   "Bar over mid-foot, flat back",
+   "Push the floor away, keep the bar close",
+   "Lock out hips and knees together"
+  ],
+  "common_mistake": "Jerking the bar off the floor",
+  "alternative": "romanian_deadlift",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=XyUB0OUfP2A",
+   "title": "How to do a Conventional Deadlift",
+   "channel": "Body Fit Training Nebraska",
+   "verified": true
+  }
+ },
+ {
+  "id": "back_extension",
+  "name": "Back Extension",
+  "muscle": "back",
+  "secondary": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "hinge",
+  "cues": [
+   "Hips on the pad, body straight",
+   "Lower with a flat back",
+   "Raise to a straight line, no overextending"
+  ],
+  "common_mistake": "Hyperextending the lower back at the top",
+  "alternative": "glute_bridge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ru1pRWiY03Y",
+   "title": "EGYM Back Extension",
+   "channel": "Dustin Buttars",
+   "verified": true
+  }
+ },
+ {
+  "id": "face_pull",
+  "name": "Face Pull",
+  "muscle": "back",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "Rope at face height",
+   "Pull toward the face, elbows high",
+   "Rotate hands outward at the end"
+  ],
+  "common_mistake": "Using too much weight",
+  "alternative": "band_pull_apart",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ljgqer1ZpXg",
+   "title": "STOP F*cking Up Face Pulls (PROPER FORM!)",
+   "channel": "ATHLEAN-X™",
+   "verified": true
+  }
+ },
+ {
+  "id": "band_pull_apart",
+  "name": "Band Pull-Apart",
+  "muscle": "back",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "band",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "pull",
+  "cues": [
+   "Arms straight at chest height",
+   "Pull the band apart to chest level",
+   "Return slowly"
+  ],
+  "common_mistake": "Shrugging shoulders",
+  "alternative": "face_pull",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=SLFDrgKarUs",
+   "title": "How To Fix 3 Common Band Pull Apart Mistakes",
+   "channel": "Paul Clingan",
+   "verified": true
+  }
+ },
+ {
+  "id": "overhead_press",
+  "name": "Barbell Overhead Press",
+  "muscle": "shoulders",
+  "secondary": [
+   "triceps"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "push",
+  "cues": [
+   "Bar at collarbone, glutes tight",
+   "Press straight up, head moves through",
+   "Lock out overhead"
+  ],
+  "common_mistake": "Over-arching the lower back",
+  "alternative": "dumbbell_shoulder_press",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=2yjwXTZQDDI",
+   "title": "How To: Standing Straight-Bar Military / Overhead Press",
+   "channel": "ScottHermanFitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "dumbbell_shoulder_press",
+  "name": "Dumbbell Shoulder Press",
+  "muscle": "shoulders",
+  "secondary": [
+   "triceps"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Dumbbells at ear level",
+   "Press up until arms are straight",
+   "Lower under control"
+  ],
+  "common_mistake": "Flaring the ribs forward",
+  "alternative": "pike_push_up",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=qEwKCR5JCog",
+   "title": "How To: Dumbbell Shoulder Press",
+   "channel": "ScottHermanFitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "pike_push_up",
+  "name": "Pike Push-Up",
+  "muscle": "shoulders",
+  "secondary": [
+   "triceps"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "push",
+  "cues": [
+   "Hips high, body in an inverted V",
+   "Lower the head toward the floor",
+   "Press back up"
+  ],
+  "common_mistake": "Hands too close to the feet",
+  "alternative": "dumbbell_shoulder_press",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=rWnpH-RGdmA",
+   "title": "How to do Pike Push-Ups (Step by Step) ✅",
+   "channel": "The Bodyweight Process",
+   "verified": true
+  }
+ },
+ {
+  "id": "lateral_raise",
+  "name": "Dumbbell Lateral Raise",
+  "muscle": "shoulders",
+  "secondary": [],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Slight bend in the elbows",
+   "Raise arms to shoulder height",
+   "Lower slowly"
+  ],
+  "common_mistake": "Swinging with momentum",
+  "alternative": "band_lateral_raise",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=pg3hz43P09w",
+   "title": "Dumbbell Lateral Raise",
+   "channel": "Renaissance Periodization",
+   "verified": true
+  }
+ },
+ {
+  "id": "band_lateral_raise",
+  "name": "Band Lateral Raise",
+  "muscle": "shoulders",
+  "secondary": [],
+  "equipment": "band",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Stand on the band",
+   "Raise arms to shoulder height",
+   "Control the return"
+  ],
+  "common_mistake": "Shrugging the traps",
+  "alternative": "lateral_raise",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=yfNg5sFndbw",
+   "title": "Band Lateral Raise",
+   "channel": "Men's Health",
+   "verified": true
+  }
+ },
+ {
+  "id": "machine_shoulder_press",
+  "name": "Machine Shoulder Press",
+  "muscle": "shoulders",
+  "secondary": [
+   "triceps"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Seat so handles start at shoulder level",
+   "Press up without locking out hard",
+   "Lower slowly"
+  ],
+  "common_mistake": "Arching the back off the pad",
+  "alternative": "dumbbell_shoulder_press",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=7ijGii2c02o",
+   "title": "Exercise Tutorial - Machine Shoulder Press",
+   "channel": "The Muscle Mentors",
+   "verified": true
+  }
+ },
+ {
+  "id": "rear_delt_fly",
+  "name": "Reverse Fly",
+  "muscle": "shoulders",
+  "secondary": [
+   "back"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Hinge forward with a flat back",
+   "Raise arms out to the sides",
+   "Squeeze the rear shoulders"
+  ],
+  "common_mistake": "Using the lower back to swing",
+  "alternative": "band_pull_apart",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=d1QEddtoOq0",
+   "title": "How To Dumbbell Reverse Fly PROPERLY | MAXIMIZE REAR DELTS",
+   "channel": "Colossus Fitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "dumbbell_curl",
+  "name": "Dumbbell Biceps Curl",
+  "muscle": "biceps",
+  "secondary": [
+   "forearms"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Elbows pinned at your sides",
+   "Curl up, palms to the shoulders",
+   "Lower for 2 to 3 seconds"
+  ],
+  "common_mistake": "Swinging the torso",
+  "alternative": "band_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+   "title": "How to Do a Dumbbell Biceps Curl | Arm Workout",
+   "channel": "Howcast",
+   "verified": true
+  }
+ },
+ {
+  "id": "band_curl",
+  "name": "Band Curl",
+  "muscle": "biceps",
+  "secondary": [],
+  "equipment": "band",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Stand on the band",
+   "Curl with elbows still",
+   "Lower slowly"
+  ],
+  "common_mistake": "Letting elbows drift forward",
+  "alternative": "dumbbell_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=R6bo5tw2rqs",
+   "title": "Low Band Dual Bicep Curl (Using a Door anchor)",
+   "channel": "Kaylee Jollota",
+   "verified": true
+  }
+ },
+ {
+  "id": "barbell_curl",
+  "name": "Barbell Curl",
+  "muscle": "biceps",
+  "secondary": [
+   "forearms"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "isolation",
+  "cues": [
+   "Shoulder-width grip",
+   "Curl without moving the elbows",
+   "Lower fully"
+  ],
+  "common_mistake": "Leaning back to lift",
+  "alternative": "dumbbell_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=_m5AGtgkRcg",
+   "title": "📝FORM CHECK - BARBELL CURL",
+   "channel": "Renshaw's Personal Training",
+   "verified": true
+  }
+ },
+ {
+  "id": "hammer_curl",
+  "name": "Hammer Curl",
+  "muscle": "biceps",
+  "secondary": [
+   "forearms"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Palms facing each other",
+   "Curl up keeping elbows still",
+   "Lower slowly"
+  ],
+  "common_mistake": "Rushing the lowering phase",
+  "alternative": "dumbbell_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=CFBZ4jN1CMI",
+   "title": "How to do a Dumbbell Hammer Curl",
+   "channel": "National Academy of Sports Medicine (NASM)",
+   "verified": true
+  }
+ },
+ {
+  "id": "cable_curl",
+  "name": "Cable Curl",
+  "muscle": "biceps",
+  "secondary": [],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Stand facing the cable",
+   "Curl keeping elbows at the sides",
+   "Control the return"
+  ],
+  "common_mistake": "Using body swing",
+  "alternative": "dumbbell_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=MtwXR7frj-s",
+   "title": "How To Do A Bicep Cable Curl",
+   "channel": "Mark Sandor Fitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "triceps_pushdown",
+  "name": "Triceps Pushdown",
+  "muscle": "triceps",
+  "secondary": [],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Elbows pinned at your sides",
+   "Push down until arms are straight",
+   "Return to 90 degrees"
+  ],
+  "common_mistake": "Elbows flaring away from the body",
+  "alternative": "bench_dip",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=1FjkhpZsaxc",
+   "title": "The Perfect Triceps Pushdown (DO THIS!)",
+   "channel": "Andrew Kwong (DeltaBolic)",
+   "verified": true
+  }
+ },
+ {
+  "id": "overhead_triceps_extension",
+  "name": "Overhead Triceps Extension",
+  "muscle": "triceps",
+  "secondary": [],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Hold one dumbbell overhead with both hands",
+   "Lower behind the head",
+   "Extend back up, elbows close to the head"
+  ],
+  "common_mistake": "Elbows flaring wide",
+  "alternative": "bench_dip",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=W6h3t9mkRrY",
+   "title": "Overhead Triceps Extension | Proper Form Tutorial for Bigger Triceps",
+   "channel": "FIT.nl",
+   "verified": true
+  }
+ },
+ {
+  "id": "bench_dip",
+  "name": "Bench Dip",
+  "muscle": "triceps",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "push",
+  "cues": [
+   "Hands on a bench behind you",
+   "Lower until elbows reach about 90 degrees",
+   "Press up"
+  ],
+  "common_mistake": "Dropping too deep on stressed shoulders",
+  "alternative": "triceps_pushdown",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=lPXJMzFXFvc",
+   "title": "How to Do a Bench Dip | Arm Workout",
+   "channel": "Howcast",
+   "verified": true
+  }
+ },
+ {
+  "id": "close_grip_push_up",
+  "name": "Close-Grip Push-Up",
+  "muscle": "triceps",
+  "secondary": [
+   "chest"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "push",
+  "cues": [
+   "Hands under the chest, close together",
+   "Keep elbows close to the body",
+   "Press up"
+  ],
+  "common_mistake": "Elbows flaring out",
+  "alternative": "bench_dip",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=TShBPBXbRgM",
+   "title": "Tutorial | Close-Grip Push-Up off of a Dumbbell",
+   "channel": "Get Right Results",
+   "verified": true
+  }
+ },
+ {
+  "id": "skull_crusher",
+  "name": "EZ-Bar Skull Crusher",
+  "muscle": "triceps",
+  "secondary": [],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "isolation",
+  "cues": [
+   "Lie flat, bar over the forehead",
+   "Bend elbows, lower to just above the head",
+   "Extend, keeping upper arms still"
+  ],
+  "common_mistake": "Moving the shoulders and turning it into a press",
+  "alternative": "overhead_triceps_extension",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=lplzcx3hBiI",
+   "title": "EZ Bar Skull Crusher TUTORIAL",
+   "channel": "Berci",
+   "verified": true
+  }
+ },
+ {
+  "id": "bodyweight_squat",
+  "name": "Bodyweight Squat",
+  "muscle": "quads",
+  "secondary": [
+   "glutes"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "squat",
+  "cues": [
+   "Feet shoulder-width, chest up",
+   "Sit down and back to parallel",
+   "Drive through the heels"
+  ],
+  "common_mistake": "Knees caving inward",
+  "alternative": "goblet_squat",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=RClKKQqsvXA",
+   "title": "How to Perform the Bodyweight Squat - Exercise Tutorial",
+   "channel": "Buff Dudes Workouts",
+   "verified": true
+  }
+ },
+ {
+  "id": "goblet_squat",
+  "name": "Goblet Squat",
+  "muscle": "quads",
+  "secondary": [
+   "glutes",
+   "core"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "squat",
+  "cues": [
+   "Hold a dumbbell at the chest",
+   "Squat deep with elbows inside the knees",
+   "Stand tall"
+  ],
+  "common_mistake": "Heels lifting off the floor",
+  "alternative": "bodyweight_squat",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=7a0CTUjORN8",
+   "title": "Goblet Squat Exercise | Proper Form, Benefits & Common Mistakes | Mobile Physiotherapy",
+   "channel": "Mobile Physiotherapy",
+   "verified": true
+  }
+ },
+ {
+  "id": "barbell_back_squat",
+  "name": "Barbell Back Squat",
+  "muscle": "quads",
+  "secondary": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "squat",
+  "cues": [
+   "Bar on the upper back, brace the core",
+   "Squat to at least parallel",
+   "Drive up, knees tracking over toes"
+  ],
+  "common_mistake": "Knees caving, chest dropping",
+  "alternative": "goblet_squat",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=-bJIpOq-LWk",
+   "title": "How to do a Barbell Back Squat",
+   "channel": "National Academy of Sports Medicine (NASM)",
+   "verified": true
+  }
+ },
+ {
+  "id": "leg_press",
+  "name": "Leg Press",
+  "muscle": "quads",
+  "secondary": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "squat",
+  "cues": [
+   "Feet shoulder-width on the platform",
+   "Lower until knees reach about 90 degrees",
+   "Press without locking knees"
+  ],
+  "common_mistake": "Lower back lifting off the seat",
+  "alternative": "bodyweight_squat",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=obqVU1u3Bfk",
+   "title": "Leg Press Tutorial (The RIGHT Way)",
+   "channel": "Casey Kelly",
+   "verified": true
+  }
+ },
+ {
+  "id": "walking_lunge",
+  "name": "Walking Lunge",
+  "muscle": "quads",
+  "secondary": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "lunge",
+  "cues": [
+   "Step long, torso upright",
+   "Lower the back knee toward the floor",
+   "Push through the front heel"
+  ],
+  "common_mistake": "Short steps loading the knee",
+  "alternative": "reverse_lunge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=vYfp2t4XgqQ",
+   "title": "Walking Lunge Tutorial - Proper Form and Technique",
+   "channel": "Runna",
+   "verified": true
+  }
+ },
+ {
+  "id": "reverse_lunge",
+  "name": "Reverse Lunge",
+  "muscle": "quads",
+  "secondary": [
+   "glutes"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "lunge",
+  "cues": [
+   "Step back and lower",
+   "Front shin vertical",
+   "Drive up through the front foot"
+  ],
+  "common_mistake": "Leaning too far forward",
+  "alternative": "bodyweight_squat",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=xrPteyQLGAo",
+   "title": "How To Reverse Lunge",
+   "channel": "PureGym",
+   "verified": true
+  }
+ },
+ {
+  "id": "bulgarian_split_squat",
+  "name": "Bulgarian Split Squat",
+  "muscle": "quads",
+  "secondary": [
+   "glutes"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "lunge",
+  "cues": [
+   "Rear foot on a bench",
+   "Lower straight down",
+   "Push through the front foot"
+  ],
+  "common_mistake": "Front foot too close to the bench",
+  "alternative": "reverse_lunge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=4Qnfw1FqWxQ",
+   "title": "Bulgarian Split Squats Exercise Tutorial | Dumbbell Split Squat",
+   "channel": "Lift With Michelle - Exercise Form Tutorials",
+   "verified": true
+  }
+ },
+ {
+  "id": "leg_extension",
+  "name": "Leg Extension",
+  "muscle": "quads",
+  "secondary": [],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Pad on the lower shin",
+   "Extend until legs are straight",
+   "Lower slowly"
+  ],
+  "common_mistake": "Swinging the weight up",
+  "alternative": "bodyweight_squat",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=xd9m2S_Rw4s",
+   "title": "Leg Extension Machine Tutorial",
+   "channel": "Morgan, M.S., CPT, WFS, FNS",
+   "verified": true
+  }
+ },
+ {
+  "id": "romanian_deadlift",
+  "name": "Romanian Deadlift",
+  "muscle": "hamstrings",
+  "secondary": [
+   "glutes",
+   "back"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "hinge",
+  "cues": [
+   "Soft knees, push hips back",
+   "Lower the bar along the legs",
+   "Squeeze glutes to stand"
+  ],
+  "common_mistake": "Rounding the back",
+  "alternative": "dumbbell_rdl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=7j-2w4-P14I",
+   "title": "Romanian Deadlift | Nuffield Health",
+   "channel": "Nuffield Health",
+   "verified": true
+  }
+ },
+ {
+  "id": "dumbbell_rdl",
+  "name": "Dumbbell Romanian Deadlift",
+  "muscle": "hamstrings",
+  "secondary": [
+   "glutes"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "hinge",
+  "cues": [
+   "Soft knees, hips back",
+   "Lower dumbbells along the thighs",
+   "Drive hips forward to stand"
+  ],
+  "common_mistake": "Squatting instead of hinging",
+  "alternative": "glute_bridge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=hQgFixeXdZo",
+   "title": "Dumbbell Romanian (RDL) Deadlift |TECHNIQUE for Beginners",
+   "channel": "Mike | J2FIT Strength & Conditioning",
+   "verified": true
+  }
+ },
+ {
+  "id": "lying_leg_curl",
+  "name": "Lying Leg Curl",
+  "muscle": "hamstrings",
+  "secondary": [],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Pad above the heels",
+   "Curl the heels toward the glutes",
+   "Lower slowly"
+  ],
+  "common_mistake": "Lifting the hips off the pad",
+  "alternative": "nordic_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=3gZm9wGTsEo",
+   "title": "Lying Leg Curl | Proper Form Tutorial for Hamstrings",
+   "channel": "FIT.nl",
+   "verified": true
+  }
+ },
+ {
+  "id": "nordic_curl",
+  "name": "Nordic Hamstring Curl",
+  "muscle": "hamstrings",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "advanced",
+  "pattern": "isolation",
+  "cues": [
+   "Anchor the heels",
+   "Lower the body forward as slowly as possible",
+   "Use hands to assist the return"
+  ],
+  "common_mistake": "Dropping quickly with no control",
+  "alternative": "lying_leg_curl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=Lgibr8od0yA",
+   "title": "How to Perform the GHD Nordic Hamstring Curl",
+   "channel": "Champion Physical Therapy and Performance",
+   "verified": true
+  }
+ },
+ {
+  "id": "glute_bridge",
+  "name": "Glute Bridge",
+  "muscle": "glutes",
+  "secondary": [
+   "hamstrings"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "hinge",
+  "cues": [
+   "Feet flat, knees bent",
+   "Drive hips up until the body is straight",
+   "Squeeze glutes at the top"
+  ],
+  "common_mistake": "Over-arching the lower back",
+  "alternative": "hip_thrust",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=SKOMwg1JLrU",
+   "title": "How to do a Glute bridge",
+   "channel": "National Academy of Sports Medicine (NASM)",
+   "verified": true
+  }
+ },
+ {
+  "id": "hip_thrust",
+  "name": "Barbell Hip Thrust",
+  "muscle": "glutes",
+  "secondary": [
+   "hamstrings"
+  ],
+  "equipment": "barbell",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "hinge",
+  "cues": [
+   "Upper back on a bench",
+   "Drive hips up, chin tucked",
+   "Pause and squeeze at the top"
+  ],
+  "common_mistake": "Overextending the lower back",
+  "alternative": "glute_bridge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=S_uZP4UH6J0",
+   "title": "How To Do A Barbell Hip Thrust The RIGHT Way! (FIX THIS!!!)",
+   "channel": "Mind Pump TV",
+   "verified": true
+  }
+ },
+ {
+  "id": "step_up",
+  "name": "Dumbbell Step-Up",
+  "muscle": "glutes",
+  "secondary": [
+   "quads"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "lunge",
+  "cues": [
+   "Whole foot on the box",
+   "Drive through the lead heel",
+   "Lower slowly"
+  ],
+  "common_mistake": "Pushing off the back foot",
+  "alternative": "reverse_lunge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=nsHxfnsywvY",
+   "title": "How To Do The Dumbbell Step Up & Variations",
+   "channel": "Bony to Bombshell",
+   "verified": true
+  }
+ },
+ {
+  "id": "cable_kickback",
+  "name": "Cable Glute Kickback",
+  "muscle": "glutes",
+  "secondary": [],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Ankle strap on",
+   "Kick back, squeezing the glute",
+   "Return slowly"
+  ],
+  "common_mistake": "Arching the lower back",
+  "alternative": "glute_bridge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=h0HJLeh0q28",
+   "title": "Build Bigger Glutes with Cable Glute Max Kickback | PD #shorts",
+   "channel": "Physique Development",
+   "verified": true
+  }
+ },
+ {
+  "id": "standing_calf_raise",
+  "name": "Standing Calf Raise",
+  "muscle": "calves",
+  "secondary": [],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Balls of the feet on the edge",
+   "Rise as high as possible",
+   "Lower into a full stretch"
+  ],
+  "common_mistake": "Bouncing through the reps",
+  "alternative": "bodyweight_calf_raise",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=FmJKR_fGDz8",
+   "title": "How to do standing calf raise",
+   "channel": "KemoStrength",
+   "verified": true
+  }
+ },
+ {
+  "id": "bodyweight_calf_raise",
+  "name": "Bodyweight Calf Raise",
+  "muscle": "calves",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Stand on the edge of a step",
+   "Rise on the toes",
+   "Lower slowly"
+  ],
+  "common_mistake": "Rushing the reps",
+  "alternative": "standing_calf_raise",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=jfMAcxniY84",
+   "title": "Bodyweight Calf Raises",
+   "channel": "Gains Without Pain - Alexander Cortes",
+   "verified": true
+  }
+ },
+ {
+  "id": "plank",
+  "name": "Plank",
+  "muscle": "core",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "core",
+  "cues": [
+   "Elbows under the shoulders",
+   "Squeeze glutes and abs",
+   "Hold a straight line"
+  ],
+  "common_mistake": "Hips sagging or piking",
+  "alternative": "dead_bug",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=mwlp75MS6Rg",
+   "title": "How to do a Plank | Proper Form & Technique | NASM",
+   "channel": "National Academy of Sports Medicine (NASM)",
+   "verified": true
+  }
+ },
+ {
+  "id": "dead_bug",
+  "name": "Dead Bug",
+  "muscle": "core",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "core",
+  "cues": [
+   "Back flat on the floor",
+   "Lower opposite arm and leg slowly",
+   "Keep the lower back pressed down"
+  ],
+  "common_mistake": "Arching the lower back",
+  "alternative": "plank",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=pYAf6yROMdk",
+   "title": "how to do a dead bug correctly",
+   "channel": "Holly Dolke",
+   "verified": true
+  }
+ },
+ {
+  "id": "bicycle_crunch",
+  "name": "Bicycle Crunch",
+  "muscle": "core",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "core",
+  "cues": [
+   "Hands behind the head",
+   "Bring elbow toward the opposite knee",
+   "Move slowly and rotate the torso"
+  ],
+  "common_mistake": "Pulling on the neck",
+  "alternative": "dead_bug",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=wpRI3xBhJmo",
+   "title": "How To Do A Bicycle Crunch | The Right Way | Well+Good",
+   "channel": "Well+Good",
+   "verified": true
+  }
+ },
+ {
+  "id": "hanging_knee_raise",
+  "name": "Hanging Knee Raise",
+  "muscle": "core",
+  "secondary": [
+   "forearms"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "core",
+  "cues": [
+   "Hang with straight arms",
+   "Raise knees toward the chest",
+   "Lower without swinging"
+  ],
+  "common_mistake": "Swinging for momentum",
+  "alternative": "dead_bug",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=MRcpnl4G3YA",
+   "title": "Hanging Knee Raise Tutorial - True Form",
+   "channel": "The Health Alchemist",
+   "verified": true
+  }
+ },
+ {
+  "id": "cable_crunch",
+  "name": "Cable Crunch",
+  "muscle": "core",
+  "secondary": [],
+  "equipment": "cable",
+  "mode": "with_machine",
+  "level": "intermediate",
+  "pattern": "core",
+  "cues": [
+   "Kneel below a high cable",
+   "Crunch ribs toward the hips",
+   "Return with control"
+  ],
+  "common_mistake": "Pulling with the arms",
+  "alternative": "bicycle_crunch",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=AV5PmZJIrrw",
+   "title": "How to PROPERLY Cable Crunch to Shape Your Abs (How to Kneeling Cable Abdominal Crunch)",
+   "channel": "Colossus Fitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "russian_twist",
+  "name": "Russian Twist",
+  "muscle": "core",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "core",
+  "cues": [
+   "Lean back slightly, feet up or down",
+   "Rotate the torso side to side",
+   "Keep the chest lifted"
+  ],
+  "common_mistake": "Moving only the arms",
+  "alternative": "plank",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=vlsq-839C0U",
+   "title": "Russian Twist Exercise Tutorial 💪 How to Do Russian Twists for Abs & Oblique Strength #russiantwist",
+   "channel": "Peloton",
+   "verified": true
+  }
+ },
+ {
+  "id": "side_plank",
+  "name": "Side Plank",
+  "muscle": "core",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "core",
+  "cues": [
+   "Elbow under the shoulder",
+   "Lift hips into a straight line",
+   "Hold, then switch sides"
+  ],
+  "common_mistake": "Hips dropping",
+  "alternative": "plank",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=rCxF2nG9vQ0",
+   "title": "How to do the perfect Side Plank and most common mistakes",
+   "channel": "Get Exercise Confident",
+   "verified": true
+  }
+ },
+ {
+  "id": "mountain_climber",
+  "name": "Mountain Climber",
+  "muscle": "core",
+  "secondary": [
+   "shoulders"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "cardio",
+  "cues": [
+   "Hands under shoulders, body straight",
+   "Drive knees toward the chest alternately",
+   "Keep hips low"
+  ],
+  "common_mistake": "Bouncing the hips high",
+  "alternative": "plank",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=fpmWW6iXfes",
+   "title": "Proper Mountain Climber Form (Fix Your Form!)",
+   "channel": "Live Lean TV",
+   "verified": true
+  }
+ },
+ {
+  "id": "kettlebell_swing",
+  "name": "Kettlebell Swing",
+  "muscle": "glutes",
+  "secondary": [
+   "hamstrings",
+   "back"
+  ],
+  "equipment": "kettlebell",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "hinge",
+  "cues": [
+   "Hinge, hike the bell back",
+   "Snap the hips forward",
+   "Let the bell float to chest height"
+  ],
+  "common_mistake": "Squatting and lifting with the arms",
+  "alternative": "dumbbell_rdl",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ZYgRuQoh6Qc",
+   "title": "The Only Kettlebell Swing Tutorial You’ll Ever Need",
+   "channel": "JTM_FIT",
+   "verified": true
+  }
+ },
+ {
+  "id": "burpee",
+  "name": "Burpee",
+  "muscle": "full_body",
+  "secondary": [
+   "chest",
+   "quads"
+  ],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "intermediate",
+  "pattern": "cardio",
+  "cues": [
+   "Squat, hands down, jump feet back",
+   "Chest to the floor, push up",
+   "Jump feet in and jump up"
+  ],
+  "common_mistake": "Sagging the lower back in the plank",
+  "alternative": "mountain_climber",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=qLBImHhCXSw",
+   "title": "How To Do A Burpee | The Right Way | Well+Good",
+   "channel": "Well+Good",
+   "verified": true
+  }
+ },
+ {
+  "id": "jumping_jack",
+  "name": "Jumping Jacks",
+  "muscle": "full_body",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "cardio",
+  "cues": [
+   "Jump feet out as arms rise",
+   "Jump back to start",
+   "Keep a steady rhythm"
+  ],
+  "common_mistake": "Landing stiff-legged",
+  "alternative": "mountain_climber",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=aknTmegKiIg",
+   "title": "Jumping Jacks Exercise Tutorial",
+   "channel": "Fit2Go Personal Training",
+   "verified": true
+  }
+ },
+ {
+  "id": "treadmill_walk",
+  "name": "Incline Treadmill Walk",
+  "muscle": "cardio",
+  "secondary": [
+   "glutes"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "cardio",
+  "cues": [
+   "Set a 6 to 12 percent incline",
+   "Walk at a pace where you can still talk",
+   "Do not hold the rails"
+  ],
+  "common_mistake": "Gripping the handles and leaning back",
+  "alternative": "brisk_walk",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=rMxxdKTlB18",
+   "title": "High INCLINE Treadmill WALKING: Most Effective Method for Fat Loss | Burn More Fat & Build Strength!",
+   "channel": "Ilium Films Fitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "brisk_walk",
+  "name": "Brisk Walk",
+  "muscle": "cardio",
+  "secondary": [],
+  "equipment": "bodyweight",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "cardio",
+  "cues": [
+   "Walk fast enough to raise your heart rate",
+   "Swing arms naturally",
+   "Keep an upright posture"
+  ],
+  "common_mistake": "Slouching",
+  "alternative": "jumping_jack",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=yFMnbOZMxnE",
+   "title": "How to do brisk outdoor walking workouts? What makes your walk brisk?",
+   "channel": "Walk After Dinner",
+   "verified": true
+  }
+ },
+ {
+  "id": "rowing_machine",
+  "name": "Rowing Machine",
+  "muscle": "cardio",
+  "secondary": [
+   "back",
+   "quads"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "cardio",
+  "cues": [
+   "Push with the legs first",
+   "Then lean back and pull the handle",
+   "Reverse the order on the return"
+  ],
+  "common_mistake": "Pulling with the arms first",
+  "alternative": "brisk_walk",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=4zWu1yuJ0_g",
+   "title": "Correct Rowing Machine Technique, Improve Your Rowing  | Concept2",
+   "channel": "concept2usa",
+   "verified": true
+  }
+ },
+ {
+  "id": "stationary_bike",
+  "name": "Stationary Bike",
+  "muscle": "cardio",
+  "secondary": [
+   "quads"
+  ],
+  "equipment": "machine",
+  "mode": "with_machine",
+  "level": "beginner",
+  "pattern": "cardio",
+  "cues": [
+   "Seat at hip height",
+   "Pedal at a steady pace",
+   "Keep shoulders relaxed"
+  ],
+  "common_mistake": "Seat too low causing knee strain",
+  "alternative": "brisk_walk",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=WhoKN__HOlM",
+   "title": "5 Dos & Don’ts on the Stationary Bike | Avoid Knee Pain!",
+   "channel": "Elevate Fitness",
+   "verified": true
+  }
+ },
+ {
+  "id": "farmer_carry",
+  "name": "Farmer's Carry",
+  "muscle": "full_body",
+  "secondary": [
+   "forearms",
+   "core"
+  ],
+  "equipment": "dumbbell",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "carry",
+  "cues": [
+   "Hold heavy dumbbells at your sides",
+   "Walk tall with short steps",
+   "Keep shoulders back"
+  ],
+  "common_mistake": "Leaning to one side",
+  "alternative": "plank",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=8OtwXwrJizk",
+   "title": "How To Do A Farmer's Walk (Farmer's Carry)",
+   "channel": "PureGym",
+   "verified": true
+  }
+ },
+ {
+  "id": "glute_med_clamshell",
+  "name": "Clamshell",
+  "muscle": "glutes",
+  "secondary": [],
+  "equipment": "band",
+  "mode": "without_machine",
+  "level": "beginner",
+  "pattern": "isolation",
+  "cues": [
+   "Lie on your side, knees bent",
+   "Open the top knee, feet together",
+   "Lower slowly"
+  ],
+  "common_mistake": "Rolling the hips back",
+  "alternative": "glute_bridge",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=EG5_gXcfozw",
+   "title": "How To Do The Clamshell Exercise - Kinetic Sports Rehab",
+   "channel": "Tangelo - Seattle Chiropractor + Rehab",
+   "verified": true
+  }
+ }
+]
