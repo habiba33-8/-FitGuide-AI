@@ -41,60 +41,6 @@ React + TypeScript (Vite)  --->  Python FastAPI  --->  free LLM (Gemini, OpenAI-
 
 More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). If you want to learn how each part works: [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md).
 
-## Run it locally (VS Code)
-
-You need Python 3.10+ and Node.js 20+. Open the project folder in VS Code and use two terminals.
-
-### 1. Get a free API key (optional but needed for the AI chat and photos)
-
-1. Open https://aistudio.google.com/apikey and create a key (free tier).
-2. Copy `.env.example` to `backend/.env` and paste the key after `LLM_API_KEY=`.
-
-Without a key the app still runs: targets, plans, calendar and exercises work, and chat falls back to knowledge-base answers.
-
-### 2. Backend (terminal 1)
-
-**Windows (PowerShell):**
-```powershell
-cd backend
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements-dev.txt
-uvicorn fitguide.main:app --reload --port 8000
-```
-If PowerShell blocks the activate script, run `Set-ExecutionPolicy -Scope Process Bypass` first, or use Command Prompt and `.venv\Scripts\activate.bat`.
-
-**macOS / Linux:**
-```bash
-cd backend
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements-dev.txt
-uvicorn fitguide.main:app --reload --port 8000
-```
-
-Check it: open http://127.0.0.1:8000/api/health
-
-### 3. Frontend (terminal 2)
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Open http://localhost:5173. The dev server forwards `/api` calls to the backend on port 8000.
-
-## Tests and evaluation
-
-```bash
-cd backend
-pytest                    # 55 tests, no API key needed
-python -m evals.run_all   # retrieval, food matching, plan constraints
-python -m evals.vision_eval   # photo accuracy, needs your own photos (see docs/EVALUATION.md)
-cd ../frontend
-npm run typecheck && npm test
-```
-
 | Check | Result |
 | --- | --- |
 | Knowledge-base search (50 queries) | BM25 hit@1 0.92, hit@3 0.94, vs 0.64 / 0.82 for a simple word-overlap baseline |
